@@ -1,0 +1,36 @@
+<div class="container">
+    <button class="btn_course" (click)="createCourse()">Create Course</button>
+    <div class="row">
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>courseid</th>
+                    <th>coursename</th>
+                    <th>courseDuration</th>
+                    <th>videoRecording</th>
+                    <th>statuse</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr id="d1" *ngFor="let courses of courseData">
+
+                    <td id="m1">{{courses.courseid}}</td>
+                    <td id="f1">{{courses.coursename}}</td>
+                    <td id="l1">{{courses.courseDuration}}</td>
+                    <td id="m1">{{courses.videoRecording}}</td>
+                    <td id="m1">{{courses.status}}</td>
+                    <td>
+                        <span class="text-warning"><i class="fa-solid fa-edit"></i></span>
+                    </td>
+                    <td>
+                        <span class="text-danger"><i class="fa-solid fa-close"></i></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <app-create-course></app-create-course> -->
+</div>

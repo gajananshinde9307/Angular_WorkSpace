@@ -1,0 +1,4 @@
+.courseForm {
+    display: flex;
+    flex-direction: column;
+}
