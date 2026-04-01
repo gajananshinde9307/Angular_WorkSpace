@@ -1,0 +1,55 @@
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h2>Trainer Management</h2>
+        <button class="btn-create" (click)="createTrainer()">+ Create Trainer</button>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrapper">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th class="hide-mobile">Address</th>
+                    <th>Gender</th>
+                    <th>Subject</th>
+                    <th>Experience</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of trainers">
+
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td class="hide-mobile">{{item.address}}</td>
+                    <td>{{item.gender}}</td>
+                    <td>{{item.subject}}</td>
+                    <td>{{item.exp}}</td>
+
+                    <td>
+                        <button class="btn-edit"><i class="fa fa-edit"></i></button>
+                    </td>
+
+                    <td>
+                        <button class="btn-delete"><i class="fa fa-close"></i></button>
+                    </td>
+
+                </tr>
+
+                <tr *ngIf="trainers?.length === 0">
+                    <td colspan="8" class="no-data">No Trainers Available</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

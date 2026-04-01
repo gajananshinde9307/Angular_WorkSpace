@@ -1,0 +1,201 @@
+/* .btn_Enroll {
+    background-color: #27334b;
+    color: white;
+    position: relative;
+    left: 91.5%;
+    border-radius: 1em;
+    height: 2.3em;
+
+    text-align: center;
+
+}
+
+
+
+table {
+    font-family: 'Calibri';
+    font-size: 15px;
+    background-color: #fff;
+    color: #333;
+    margin-top: 1em;
+}
+
+.modal-header {
+    background-color: #333;
+    color: #fff;
+}
+
+thead th {
+    background-color: #27334b;
+    color: white;
+}
+
+tbody tr td {
+    padding: 1em;
+    font-weight: bold;
+} */
+
+/* ===== Container ===== */
+.container {
+    width: 95%;
+    margin: 20px auto;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.header h2 {
+    color: #27334b;
+}
+
+/* ===== Search Box ===== */
+.search-box {
+    display: flex;
+    border: 1px solid #27334b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 6px 10px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #27334b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    opacity: 0.8;
+}
+
+/* ===== Table Wrapper ===== */
+.table-wrapper {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ===== Header ===== */
+thead {
+    background-color: #27334b;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ===== Hover ===== */
+tbody tr:hover {
+    background-color: #f5f7fa;
+}
+
+/* ===== Status ===== */
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.active {
+    background-color: #28a745;
+}
+
+.inactive {
+    background-color: #6c757d;
+}
+
+/* ===== Pending Fees Highlight ===== */
+.pending {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== Buttons ===== */
+.btn-edit {
+    background-color: #ffc107;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    opacity: 0.8;
+}
+
+/* ===== No Data ===== */
+.no-data {
+    padding: 15px;
+    color: gray;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    /* Hide less important columns */
+    .hide-mobile {
+        display: none;
+    }
+}
