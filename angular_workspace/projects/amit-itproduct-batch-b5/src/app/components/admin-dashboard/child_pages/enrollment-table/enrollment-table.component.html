@@ -1,0 +1,132 @@
+<!-- <div class="container">
+    <div class="search_btn"><input type="text"><button><i class="fa fa-search" aria-hidden="true"></i>"></button></div>
+    <div class="row">
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+
+                    <th>enrollid</th>
+                    <th>status</th>
+                    <th>enrolled_on</th>
+                    <th>batch</th>
+                    <th>user</th>
+                    <th>videoAccess</th>
+                    <th>batchAcess</th>
+                    <th>totalfees</th>
+                    <th>paidfees</th>
+                    <th>pendingfees</th>
+                    <th>duedate</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="d1" *ngFor="let item of enrollments">
+
+                    <td id="m1">{{item.enrollid}}</td>
+                    <td id="f1">{{item.status}}</td>
+                    <td id="l1">{{item.enrolled_on}}</td>
+                    <td id="m1">{{item.batch}}</td>
+                    <td id="m1">{{item.user}}</td>
+                    <td id="m1">{{item.videoAccess}}</td>
+                    <td id="m1">{{item.batchAcess}}</td>
+                    <td id="f1">{{item.totalfees}}</td>
+                    <td id="l1">{{item.paidfees}}</td>
+                    <td id="m1">{{item.pendingfees}}</td>
+                    <td id="m1">{{item.duedate}}</td>
+
+                    <td>
+                        <span class="text-warning"><i class="fa-solid fa-edit"></i></span>
+                    </td>
+                    <td>
+                        <span class="text-danger"><i class="fa-solid fa-close"></i></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
+
+<div class="container">
+
+    <!-- Header + Search -->
+    <div class="header">
+        <h2>Enrollment Management</h2>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search..." >
+            <button>
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrapper">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th class="hide-mobile">Batch</th>
+                    <th>User</th>
+                    <th class="hide-mobile">Video</th>
+                    <th class="hide-mobile">Batch Access</th>
+                    <th>Total</th>
+                    <th>Paid</th>
+                    <th>Pending</th>
+                    <th class="hide-mobile">Due Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of enrollments">
+
+                    <td>{{item.enrollid}}</td>
+
+                    <td>
+                        <span class="status"
+                              [ngClass]="item.status === 'ACTIVE' ? 'active' : 'inactive'">
+                            {{item.status}}
+                        </span>
+                    </td>
+
+                    <td>{{item.enrolled_on}}</td>
+                    <td class="hide-mobile">{{item.batch}}</td>
+                    <td>{{item.user}}</td>
+                    <td class="hide-mobile">{{item.videoAccess}}</td>
+                    <td class="hide-mobile">{{item.batchAcess}}</td>
+
+                    <td>{{item.totalfees}}</td>
+                    <td>{{item.paidfees}}</td>
+
+                    <td>
+                        <span class="pending">{{item.pendingfees}}</span>
+                    </td>
+
+                    <td class="hide-mobile">{{item.duedate}}</td>
+
+                    <td>
+                        <button class="btn-edit" ><i class="fa fa-edit"></i></button>
+                    </td>
+
+                    <td>
+                        <button class="btn-delete"><i class="fa fa-close"></i></button>
+                    </td>
+
+                </tr>
+
+                <tr *ngIf="enrollments?.length === 0">
+                    <td colspan="13" class="no-data">No Enrollments Available</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

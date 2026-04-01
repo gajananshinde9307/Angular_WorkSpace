@@ -1,0 +1,85 @@
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">AMIT IT</h2>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li>Profile</li>
+            <li>My Course</li>
+
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Navbar -->
+        <header class="navbar">
+            <h2>Welcome, Gaju 👋</h2>
+            <span><i class="fa-solid fa-right-from-bracket" (click)="logout()"></i></span>
+        </header>
+
+        <!-- Dashboard Content -->
+        <section class="dashboard">
+
+            <div class="container">
+
+                <!-- Header -->
+                <div class="header">
+                    <h2>Course Management</h2>
+                </div>
+
+                <!-- Table -->
+                <div class="table-wrapper">
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>SR.No</th>
+                                <th>Name</th>
+                                <th>Duration</th>
+                                <th class="hide-mobile">Video</th>
+                                <th>Status</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr *ngFor="let course of courseData; let i = index">
+
+                                <td>{{ i + 1 }}</td>
+                                <td>{{course.coursename}}</td>
+                                <td>{{course.courseDuration}}</td>
+                                <td class="hide-mobile">{{course.videoRecording}}</td>
+
+                                <td>
+                                    <span class="status" [ngClass]="course.status === 'ACTIVE' ? 'active' : 'inactive'">
+                                        {{course.status}}
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="btn-arrow" (click)="goToBatch()">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr *ngIf="courseData?.length === 0">
+                                <td colspan="6" class="no-data">No Courses Available</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+</div>

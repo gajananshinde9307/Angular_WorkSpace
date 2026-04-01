@@ -1,0 +1,174 @@
+/* .btn_trainer {
+    background-color: #27334b;
+    color: white;
+    position: relative;
+    left: 91.5%;
+    border-radius: 1em;
+    height: 2.3em;
+
+    text-align: center;
+
+}
+
+.btn_trainer:hover {
+    background-color: white;
+    border-color: #27334b;
+    color: #27334b;
+    position: relative;
+
+    left: 91.5%;
+    border-radius: 1em;
+    height: 2.3em;
+
+}
+
+table {
+    font-family: 'Calibri';
+    font-size: 15px;
+    background-color: #fff;
+    color: #333;
+    margin-top: 1em;
+}
+
+.modal-header {
+    background-color: #333;
+    color: #fff;
+}
+
+thead th {
+    background-color: #27334b;
+    color: white;
+}
+
+tbody tr td {
+    padding: 1em;
+    font-weight: bold;
+} */
+
+/* ===== Container ===== */
+.container {
+    width: 95%;
+    margin: 20px auto;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h2 {
+    color: #27334b;
+}
+
+/* ===== Button ===== */
+.btn-create {
+    background-color: #27334b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-create:hover {
+    background-color: white;
+    color: #27334b;
+    border: 1px solid #27334b;
+}
+
+/* ===== Table Wrapper ===== */
+.table-wrapper {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ===== Header ===== */
+thead {
+    background-color: #27334b;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ===== Row Hover ===== */
+tbody tr:hover {
+    background-color: #f5f7fa;
+}
+
+/* ===== Buttons ===== */
+.btn-edit {
+    background-color: #ffc107;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    opacity: 0.8;
+}
+
+/* ===== No Data ===== */
+.no-data {
+    padding: 15px;
+    color: gray;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    th, td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* Hide less important columns */
+    .hide-mobile {
+        display: none;
+    }
+
+    .btn-create {
+        width: 100%;
+    }
+}

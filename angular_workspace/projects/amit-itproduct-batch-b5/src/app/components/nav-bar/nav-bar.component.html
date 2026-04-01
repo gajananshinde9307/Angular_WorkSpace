@@ -1,0 +1,20 @@
+<div class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <span>AMIT_IT</span>
+    </div>
+
+    <!-- Menu Toggle (Mobile) -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu -->
+    <div class="menu" [class.active]="isMenuOpen">
+        <a routerLink="/home">Home</a>
+        <a routerLink="/courses">Courses</a>
+        <a routerLink="/about_us">About Us</a>
+    </div>
+
+</div>

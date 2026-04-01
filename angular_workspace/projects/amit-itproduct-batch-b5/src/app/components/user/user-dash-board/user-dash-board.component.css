@@ -1,0 +1,197 @@
+/* ===== MAIN CONTAINER ===== */
+.container {
+    display: flex;
+   z-index: 1;
+   top: 0;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 220px;
+    background: #27334b;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+    background: #ff9800;
+    color: white;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #27334b;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+    padding: 20px;
+}
+
+/* ===== INNER CONTAINER ===== */
+.dashboard .container {
+    display: block;
+}
+
+/* ===== HEADER ===== */
+.header h2 {
+    color: #27334b;
+    margin-bottom: 15px;
+}
+
+/* ===== TABLE WRAPPER ===== */
+.table-wrapper {
+   
+    max-height: 720px;
+    overflow-y: auto;
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ===== TABLE HEADER ===== */
+thead {
+    background: #27334b;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ===== STICKY HEADER ===== */
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* ===== ROW HOVER ===== */
+tbody tr:hover {
+    background: #f5f7fa;
+}
+
+/* ===== STATUS ===== */
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+.active {
+    background: #28a745;
+}
+
+.inactive {
+    background: #6c757d;
+}
+
+/* ===== ARROW BUTTON ===== */
+.btn-arrow {
+    background: #27334b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-arrow:hover {
+    background: #ff9800;
+    transform: scale(1.1);
+}
+
+/* ===== NO DATA ===== */
+.no-data {
+    padding: 15px;
+    color: gray;
+}
+
+/* ===== SCROLLBAR ===== */
+.table-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #27334b;
+    border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .navbar h2 {
+        font-size: 16px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
